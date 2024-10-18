@@ -11,7 +11,30 @@
 .bg-accent h1, .context-dark h2, .bg-gray-900 h2, .bg-accent h2, .context-dark h3, .bg-gray-900 h3, .bg-accent h3, .context-dark h4, .bg-gray-900 h4, .bg-accent h4, .context-dark h5, .bg-gray-900 h5, .bg-accent h5, .context-dark h6, .bg-gray-900 h6, .bg-accent h6, .context-dark .heading, .bg-gray-900 .heading, .bg-accent .heading {
 	color: #ffffff;
 }
+.layout-bordered-1 {
+    display: flex;
+    justify-content: space-around; /* Adjust spacing between items */
+    flex-wrap: wrap; /* Optional, allows items to wrap on smaller screens */
+  }
 
+  .layout-bordered-1-item {
+    flex: 1; /* Makes each item take up an equal amount of space */
+    max-width: 25%; /* Adjust this based on your layout needs */
+    box-sizing: border-box;
+    padding: 10px; /* Optional padding for spacing */
+  }
+
+  @media (max-width: 768px) {
+    .layout-bordered-1-item {
+      max-width: 50%; /* Makes the items 2-per-row on smaller screens */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .layout-bordered-1-item {
+      max-width: 100%; /* Stacks items on very small screens */
+    }
+  }
 a:focus,
 button:focus {
 	outline: none !important;
